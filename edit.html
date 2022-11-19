@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table,th,td{
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <h4><a href="To_do.html">Back</a></h4>
+    <table>
+        <thead>
+            <tr>
+                <th>
+                    Id
+                </th>
+                <th>Task</th>
+                <th>Status</th>
+                <th>Change Status</th>
+            </tr>
+        </thead>
+
+        <tbody>
+
+        </tbody>
+    </table>
+</body>
+</html>
+
+<script>
+
+
+    let get_id=localStorage.getItem("id")
+    console.log(get_id)
+
+   async function fetch(){
+
+    try{
+         let raw=await fetch(`http://localhost:3001/list/${get_id}`)
+         let data=await raw.json()
+         console.log(data)
+         display(data)
+    }
+    catch(err){
+console.log(err)
+    }
+        
+    }
+
+    function display(e){
+
+        document.getElementById("edit").innerHTML=""
+
+        
+        let row=document.createElement("tr")
+         
+         let p=document.createElement("td")
+         p.innerText=e.id
+         let p2=document.createElement("td")
+         p2.innerText=e.task
+         let p3=document.createElement("td")
+         p3.innerText=e.status
+         let change=document.createElement("td")
+         change.innerHTML=`<input type="checkbox"/>`
+
+          console.log(p,p2)
+         row.append(p,p2,p3,change)
+         document.querySelector("tbody").append(row)
+
+    }
+
+    // fetch()
+</script>

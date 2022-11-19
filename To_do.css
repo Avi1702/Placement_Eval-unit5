@@ -1,0 +1,66 @@
+body{
+    text-align: center;
+}
+
+/* /* .green{
+    color: green;
+  
+} */
+/* #display:last-child{
+    color: green;
+}  */
+
+#main_body{
+    width: 30%;
+    margin: auto;
+    margin-top: 50px;
+}
+#display{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding: 18px;
+    margin-top: 10px;
+}
+#display:hover{
+    cursor: pointer;
+}
+#input_task{
+    width: 85%;
+    height: 25px;
+    border-radius: 2px;
+    border: none;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+button{
+    border: 0.2px solid green;
+    border-radius: 5px;
+    height: 25px;
+    margin-top: 30px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+#list{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    border: 2px solid green;
+}
+
+#display{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+table,th,td{
+    border: 1px solid green;
+    margin: auto;
+    margin-top: 30px;
+    align-items: center;
+}
+button:hover{
+    cursor: pointer;
+    /* color: orange; */
+}
+button{
+    background-color: orange;
+}
